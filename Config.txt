@@ -1,0 +1,647 @@
+{
+  "Browser": {
+    "Icon": "",   ///*服务器图标，可使用图床上传图片，将图片地址放置上去即可，推荐图床：https://tc.tyteam.cn/*/
+    "Thumbnail": "",  ///*服务器小图标，可使用图床上传图片，将图片地址放置上去即可，推荐图床：https://tc.tyteam.cn/*/
+    "Desc_Hint": "<color=#FFFF66>颜色字体显示</color>", ///*服务器详情页的顶部标语/*/
+    "Desc_Full": "<color=#FFFF66>颜色字体显示</color>", ///*服务器详情页右下角比内容/*/
+    "Desc_Server_List": "", ///*服务器搜索列表下面的内容/*/
+    "Login_Token": ""  ///*服务器登陆密钥/*/
+  },
+  "Server": {
+    "VAC_Secure": false,    ///*VAC系统，true开启,false关闭/*/
+    "BattlEye_Secure": false, ///*战眼系统，true开启,false关闭/*/
+    "Max_Ping_Milliseconds": 750,  ///*最大延迟750MS超过则踢出游戏/*/
+    "Timeout_Queue_Seconds": 15.0, ///*超时队列15s/*/
+    "Timeout_Game_Seconds": 30.0,  ///*游戏内超时30秒自动退出/*/
+    "Max_Packets_Per_Second": 50.0, ///*最大连接包数/*/
+    "Enable_Kick_Input_Spam": false,
+    "Enable_Kick_Input_Timeout": false,
+    "Chat_Always_Use_Rich_Text": false, ///*聊天使用富文本/*/
+    "Validate_EconInfo_Hash": true,
+    "Validate_MasterBundle_Hashes": true
+  },
+  "UnityEvents": {
+    "Allow_Server_Messages": false,   ///*允许服务器消息/*/
+    "Allow_Server_Commands": false,   ///*允许服务器命令/*/
+    "Allow_Client_Messages": false,   ///*允许客户端消息/*/
+    "Allow_Client_Commands": false    ///*允许客户端命令/*/
+  },
+  "Easy": { 这个难度对应服务器难度中的Easy，如果在这个难度下改Config，则服务器在这个难度时自动使用该难度的Config
+    "Items": {
+      "Spawn_Chance": 0.3,   ///*地图物资刷新/*/
+      "Despawn_Dropped_Time": 1800.0, ///*掉落刷新时间，单位秒/*/
+      "Despawn_Natural_Time": 1800.0, ///*掉落自然刷新时间，单位秒/*/
+      "Respawn_Time": 1800.0,  ///*重新生成新的时间，单位秒/*/
+      "Quality_Full_Chance": 0.15, //*物品品质机率1.0为最大/*/
+      "Quality_Multiplier": 1.0,   //*物品生成满品质的概率1.0为最大/*/
+      "Gun_Bullets_Full_Chance": 0.1,  直接得到满子弹枪的概率（百分数）
+      "Gun_Bullets_Multiplier": 0.7,   刷新的枪弹药倍数
+      "Magazine_Bullets_Full_Chance": 0.1,  刷新的弹匣满子弹概率
+      "Magazine_Bullets_Multiplier": 0.5,   刷新的枪弹药倍数
+      "Crate_Bullets_Full_Chance": 0.4,   刷新满弹盒的概率（百分数）
+      "Crate_Bullets_Multiplier": 1.0,   刷新的药盒弹药倍数
+      "Has_Durability": true    是否有耐久（关闭为物品无耐久）false为无耐久
+    }, 
+    "Vehicles": {
+      "Has_Battery_Chance": 0.25,  有电池的概率  1.0位最大
+      "Min_Battery_Charge": 0.1,   最小有电池概率 1.0位最大
+      "Max_Battery_Charge": 0.5,   最打有电池概率 1.0位最大
+      "Has_Tire_Chance": 0.5,  有轮胎概率 1.0位最大  
+      "Respawn_Time": 3600.0,  载具刷新时间（设置为1载具爆炸后消失）
+      "Unlocked_After_Seconds_In_Safezone": 3600.0,   在车辆中解锁几秒钟后，可能会被刷新
+      "Armor_Multiplier": 1.0,   护甲倍数（越低越耐打0.0为无敌）
+      "Child_Explosion_Armor_Multiplier": 1.0,
+      "Gun_Lowcal_Damage_Multiplier": 1.0,  被枪攻击所造成的伤害，1.0正常 数值越低造成伤害越低
+      "Gun_Highcal_Damage_Multiplier": 1.2,  枪支伤害倍数
+      "Melee_Damage_Multiplier": 1.0,   近战伤害倍数
+      "Max_Instances_Tiny": 4,
+      "Max_Instances_Small": 8,
+      "Max_Instances_Medium": 16,
+      "Max_Instances_Large": 32,
+      "Max_Instances_Insane": 64
+    },
+    "Zombies": {
+      "Spawn_Chance": 0.5, 生成概率
+      "Loot_Chance": 0.7,  普通僵尸生成概率
+      "Crawler_Chance": 0.1,  爬行僵尸生成概率
+      "Sprinter_Chance": 0.1, 冲刺僵尸生成概率
+      "Flanker_Chance": 0.05, 隐身僵尸生成概率
+      "Burner_Chance": 0.05,  燃烧僵尸生成概率
+      "Acid_Chance": 0.05,    吐酸僵尸生成概率
+      "Boss_Electric_Chance": 0.0001,  电BOSS生成几率
+      "Boss_Wind_Chance": 0.0001,   风BOSS生成几率
+      "Boss_Fire_Chance": 0.0001,   火BOSS生成几率
+      "Spirit_Chance": 0.0,    
+      "DL_Red_Volatile_Chance": 0.0,
+      "DL_Blue_Volatile_Chance": 0.0,
+      "Boss_Elver_Stomper_Chance": 0.0, BOOS践踏几率 
+      "Respawn_Day_Time": 360.0,  白天生成时间
+      "Respawn_Night_Time": 30.0,  夜晚生成时间
+      "Respawn_Beacon_Time": 0.0,  尸潮刷新时间
+      "Quest_Boss_Respawn_Interval": 600.0,  BOSS重生时间 秒
+      "Damage_Multiplier": 1.0,  伤害倍数（越低伤害越低）
+      "Armor_Multiplier": 1.0,   护甲倍数（越低越难打）
+      "Backstab_Multiplier": 1.5,
+      "NonHeadshot_Armor_Multiplier": 1.0, 僵尸非爆头倍数
+      "Beacon_Experience_Multiplier": 1.0,
+      "Full_Moon_Experience_Multiplier": 2.0, 满月僵尸倍数
+      "Min_Drops": 1,  普通僵尸掉落最小数量
+      "Max_Drops": 1,  普通僵尸掉落最大数量
+      "Min_Mega_Drops": 5,  最小巨型掉落数量
+      "Max_Mega_Drops": 5,  最大巨型掉落数量
+      "Min_Boss_Drops": 8,  最小BOSS掉落数量
+      "Max_Boss_Drops": 10, 最大BOSS掉落数量
+      "Slow_Movement": true,  能否慢速移动
+      "Can_Stun": true,   能否被击晕
+      "Only_Critical_Stuns": true,  致命眩晕
+      "Weapons_Use_Player_Damage": true,  武器使用对玩家的伤害
+      "Can_Target_Barricades": true,  可以瞄准路障
+      "Can_Target_Structures": true,  可以瞄准结构
+      "Can_Target_Vehicles": true,  可以瞄准车辆
+      "Beacon_Max_Rewards": 0,  尸潮最大奖励
+      "Beacon_Max_Participants": 0,   尸潮最大参与者
+      "Beacon_Rewards_Multiplier": 1.0  尸潮奖励倍数
+    }, 
+    "Animals": {
+      "Respawn_Time": 900.0,  重生时间（秒）
+      "Damage_Multiplier": 1.0,  伤害倍数
+      "Armor_Multiplier": 1.25,  护甲倍数（越低越耐打，不能低于0.001）
+      "Max_Instances_Tiny": 4, 最小实例数
+      "Max_Instances_Small": 8, 最小实例数
+      "Max_Instances_Medium": 16, 最大实例数中
+      "Max_Instances_Large": 32, 最大实例数
+      "Max_Instances_Insane": 64, 最大实例疯狂
+      "Weapons_Use_Player_Damage": true  武器 玩家 伤害
+    },
+    "Barricades": {
+      "Decay_Time": 604800,   玩家超过该时间未上线建筑自动清理，单位秒
+      "Armor_Lowtier_Multiplier": 1.0, 建筑无敌 0.0则无敌
+      "Armor_Hightier_Multiplier": 0.5, 建筑无敌 0.0则无敌
+      "Gun_Lowcal_Damage_Multiplier": 1.0, 
+      "Gun_Highcal_Damage_Multiplier": 1.0,
+      "Melee_Damage_Multiplier": 1.0,   近战伤害乘数
+      "Allow_Item_Placement_On_Vehicle": true, 允许在车辆上放置物品
+      "Allow_Trap_Placement_On_Vehicle": true,  允许在车辆上放置陷阱
+      "Max_Item_Distance_From_Hull": 64.0,距载体的最大距离
+      "Max_Trap_Distance_From_Hull": 16.0 距载体的最大陷阱距离
+    },
+    "Structures": {
+      "Decay_Time": 604800, 玩家超过该时间未上线障碍物自动清理，单位秒
+      "Armor_Lowtier_Multiplier": 1.0, 建筑无敌 0.0则无敌
+      "Armor_Hightier_Multiplier": 0.5, 建筑无敌 0.0则无敌
+      "Gun_Lowcal_Damage_Multiplier": 1.0,
+      "Gun_Highcal_Damage_Multiplier": 1.0,
+      "Melee_Damage_Multiplier": 1.0  近战伤害乘数
+    },
+    "Players": {
+      "Health_Regen_Min_Food": 85,     生命恢复饥饿最低要求
+      "Health_Regen_Min_Water": 85,    生命恢复饥渴最低要求
+      "Health_Regen_Ticks": 60,        生命恢复时间
+      "Food_Use_Ticks": 350,          食物消化周期
+      "Food_Damage_Ticks": 15,     饥饿掉血周期
+      "Water_Use_Ticks": 320,      水消耗周期
+      "Water_Damage_Ticks": 20,    饥渴掉血周期
+      "Virus_Infect": 50,        健康最低值（低于会被感染）
+      "Virus_Use_Ticks": 125,    健康降低周期
+      "Virus_Damage_Ticks": 25,  被感染掉血周期
+      "Leg_Regen_Ticks": 750,    骨折恢复周期
+      "Bleed_Damage_Ticks": 7,    流血伤害周期
+      "Bleed_Regen_Ticks": 15,   流血恢复周期
+      "Armor_Multiplier": 1.0,   护甲倍数
+      "Experience_Multiplier": 1.0,  经验别墅
+      "Detect_Radius_Multiplier": 1.25, 检测半径倍数（发现敌人在地图上）
+      "Ray_Aggressor_Distance": 8.0,  子弹/伤害射线进攻者距离
+      "Lose_Skills_PvP": 0.5,   PVP死亡丢失技能百分比（不掉：1.0）
+      "Lose_Skills_PvE": 0.5,   PVE死亡丢失技能百分比（不掉：1.0）
+      "Lose_Items_PvP": 0.99,    PVP死亡丢失物品百分比（不掉：0.0）
+      "Lose_Items_PvE": 1.0,     PVE死亡丢失物品百分比（不掉：0.0）
+      "Lose_Clothes_PvP": true,   PVP死亡丢失装备（不掉：false）
+      "Lose_Clothes_PvE": true,   PVE死亡丢失装备（不掉：false）
+      "Lose_Weapons_PvP": true,   PVP死亡丢失武器（不掉：false）
+      "Lose_Weapons_PvE": true,   PVE死亡丢失武器（不掉：false）
+      "Can_Hurt_Legs": true,    是否高空掉落伤害
+      "Can_Break_Legs": true,   能否骨折
+      "Can_Fix_Legs": true,    能否恢复骨折
+      "Can_Start_Bleeding": true,  能否流血
+      "Can_Stop_Bleeding": true,    能否止血
+      "Spawn_With_Max_Skills": false,    是否最大技能
+      "Spawn_With_Stamina_Skills": false, 耐力是否最大技能
+      "Allow_Instakill_Headshots": true,  允许Instakill爆头
+      "Allow_Per_Character_Saves": true    允许保存每个字符
+    },
+    "Objects": {
+      "Binary_State_Reset_Multiplier": 1.0, 生成重置倍数
+      "Fuel_Reset_Multiplier": 1.0,  燃料重生倍数
+      "Water_Reset_Multiplier": 1.0,  水重生倍数
+      "Resource_Reset_Multiplier": 1.0,  资源重生倍数
+      "Resource_Drops_Multiplier": 1.0,  资源掉落倍数
+      "Rubble_Reset_Multiplier": 1.0,  碎岩重生倍数
+      "Allow_Holiday_Drops": true,  允许假期掉落
+      "Items_Obstruct_Tree_Respawns": true  是否会物品阻碍树木重生
+    },
+    "Events": {
+      "Rain_Frequency_Min": 3.0,  最小下雨频率（为0不下雨）
+      "Rain_Frequency_Max": 7.0,  最大下雨频率（为0不下雨）
+      "Rain_Duration_Min": 0.1,   下雨最小持续时间
+      "Rain_Duration_Max": 0.5,   下雨最大持续时间
+      "Snow_Frequency_Min": 1.3,  最小下雪频率
+      "Snow_Frequency_Max": 4.6,  最大下雪频率
+      "Snow_Duration_Min": 0.2,   下雪最小持续时间
+      "Snow_Duration_Max": 0.5,    下雪最小持续时间
+      "Airdrop_Frequency_Min": 0.5,  最小空投频率
+      "Airdrop_Frequency_Max": 5.0,  最大空投频率
+      "Airdrop_Speed": 100.0,   空投速度
+      "Airdrop_Force": 8.0,   空投力量
+      "Arena_Min_Players": 2,  大逃杀开始最少玩家
+      "Arena_Compactor_Damage": 10, 大逃杀范围圈伤害
+      "Arena_Clear_Timer": 5,  大逃杀清除计时器秒
+      "Arena_Finale_Timer": 10, 大逃杀最终倒计时秒
+      "Arena_Restart_Timer": 15, 大逃杀重启倒计时秒
+      "Arena_Compactor_Delay_Timer": 1, 大逃杀范围圈延时倒计时
+      "Arena_Compactor_Pause_Timer": 5, 大逃杀范围圈暂停计时
+      "Use_Airdrops": true, 使用空投 
+      "Arena_Use_Compactor_Pause": true, 大逃杀范围圈暂停
+      "Arena_Compactor_Speed_Tiny": 0.5, 大逃杀范围圈收缩最小圈
+      "Arena_Compactor_Speed_Small": 1.5,   大逃杀范围圈收缩小圈
+      "Arena_Compactor_Speed_Medium": 3.0,    大逃杀范围圈收缩正常圈
+      "Arena_Compactor_Speed_Large": 4.5,   大逃杀范围圈收缩大圈
+      "Arena_Compactor_Speed_Insane": 6.0, 大逃杀范围圈收缩超大圈
+      "Arena_Compactor_Shrink_Factor": 0.5 大逃杀范围圈收缩数
+    },
+    "Gameplay": {
+      "Repair_Level_Max": 2,   最大维修等级
+      "Hitmarkers": true,  命中显示红色标记
+      "Crosshair": false,  十字线瞄准
+      "Ballistics": true,  是否有弹道
+      "Chart": true,    是否有地图
+      "Satellite": false,  卫星
+      "Compass": false,  方向指南针
+      "Group_Map": true,  组成员显示在地图上
+      "Group_HUD": true,   组成员HUD
+      "Group_Player_List": true, 显示组列表
+      "Allow_Static_Groups": true, 允许静态组
+      "Allow_Dynamic_Groups": true, 允许动态组
+      "Allow_Shoulder_Camera": true, 允许玩家视角
+      "Can_Suicide": true,  自杀
+      "Friendly_Fire": true,  友好之火
+      "Bypass_Buildable_Mobility": false, 绕过可构建的移动性
+      "Timer_Exit": 10, 退出游戏时间
+      "Timer_Respawn": 10,  重生时间
+      "Timer_Home": 30, 回家时间
+      "Timer_Leave_Group": 10, 离开组的时间
+      "Max_Group_Members": 0  最大组成员人数
+    }
+  },
+  "Normal": {    这个难度对应服务器难度中的Normal，如果在这个难度下改Config，则服务器在这个难度时自动使用该难度的Config
+    "Items": {
+      "Spawn_Chance": 0.3,
+      "Despawn_Dropped_Time": 1800.0,
+      "Despawn_Natural_Time": 1800.0,
+      "Respawn_Time": 1800.0,
+      "Quality_Full_Chance": 0.15,
+      "Quality_Multiplier": 1.0,
+      "Gun_Bullets_Full_Chance": 0.1,
+      "Gun_Bullets_Multiplier": 0.7,
+      "Magazine_Bullets_Full_Chance": 0.1,
+      "Magazine_Bullets_Multiplier": 0.5,
+      "Crate_Bullets_Full_Chance": 0.4,
+      "Crate_Bullets_Multiplier": 1.0,
+      "Has_Durability": true
+    },
+    "Vehicles": {
+      "Has_Battery_Chance": 0.25,
+      "Min_Battery_Charge": 0.1,
+      "Max_Battery_Charge": 0.5,
+      "Has_Tire_Chance": 0.5,
+      "Respawn_Time": 3600.0,
+      "Unlocked_After_Seconds_In_Safezone": 3600.0,
+      "Armor_Multiplier": 1.0,
+      "Child_Explosion_Armor_Multiplier": 1.0,
+      "Gun_Lowcal_Damage_Multiplier": 1.0,
+      "Gun_Highcal_Damage_Multiplier": 1.2,
+      "Melee_Damage_Multiplier": 1.0,
+      "Max_Instances_Tiny": 4,
+      "Max_Instances_Small": 8,
+      "Max_Instances_Medium": 16,
+      "Max_Instances_Large": 32,
+      "Max_Instances_Insane": 64
+    },
+    "Zombies": {
+      "Spawn_Chance": 0.5,
+      "Loot_Chance": 0.7,
+      "Crawler_Chance": 0.1,
+      "Sprinter_Chance": 0.1,
+      "Flanker_Chance": 0.05,
+      "Burner_Chance": 0.05,
+      "Acid_Chance": 0.05,
+      "Boss_Electric_Chance": 0.0001,
+      "Boss_Wind_Chance": 0.0001,
+      "Boss_Fire_Chance": 0.0001,
+      "Spirit_Chance": 0.0,
+      "DL_Red_Volatile_Chance": 0.0,
+      "DL_Blue_Volatile_Chance": 0.0,
+      "Boss_Elver_Stomper_Chance": 0.0,
+      "Respawn_Day_Time": 360.0,
+      "Respawn_Night_Time": 30.0,
+      "Respawn_Beacon_Time": 0.0,
+      "Quest_Boss_Respawn_Interval": 600.0,
+      "Damage_Multiplier": 0.75,
+      "Armor_Multiplier": 1.25,
+      "Backstab_Multiplier": 1.25,
+      "NonHeadshot_Armor_Multiplier": 1.0,
+      "Beacon_Experience_Multiplier": 1.0,
+      "Full_Moon_Experience_Multiplier": 2.0,
+      "Min_Drops": 1,
+      "Max_Drops": 1,
+      "Min_Mega_Drops": 5,
+      "Max_Mega_Drops": 5,
+      "Min_Boss_Drops": 8,
+      "Max_Boss_Drops": 10,
+      "Slow_Movement": true,
+      "Can_Stun": true,
+      "Only_Critical_Stuns": false,
+      "Weapons_Use_Player_Damage": false,
+      "Can_Target_Barricades": true,
+      "Can_Target_Structures": true,
+      "Can_Target_Vehicles": true,
+      "Beacon_Max_Rewards": 0,
+      "Beacon_Max_Participants": 0,
+      "Beacon_Rewards_Multiplier": 1.0
+    },
+    "Animals": {
+      "Respawn_Time": 900.0,
+      "Damage_Multiplier": 1.0,
+      "Armor_Multiplier": 1.25,
+      "Max_Instances_Tiny": 4,
+      "Max_Instances_Small": 8,
+      "Max_Instances_Medium": 16,
+      "Max_Instances_Large": 32,
+      "Max_Instances_Insane": 64,
+      "Weapons_Use_Player_Damage": true
+    },
+    "Barricades": {
+      "Decay_Time": 604800,
+      "Armor_Lowtier_Multiplier": 1.0,
+      "Armor_Hightier_Multiplier": 0.5,
+      "Gun_Lowcal_Damage_Multiplier": 1.0,
+      "Gun_Highcal_Damage_Multiplier": 1.0,
+      "Melee_Damage_Multiplier": 1.0,
+      "Allow_Item_Placement_On_Vehicle": true,
+      "Allow_Trap_Placement_On_Vehicle": true,
+      "Max_Item_Distance_From_Hull": 64.0,
+      "Max_Trap_Distance_From_Hull": 16.0
+    },
+    "Structures": {
+      "Decay_Time": 604800,
+      "Armor_Lowtier_Multiplier": 1.0,
+      "Armor_Hightier_Multiplier": 0.5,
+      "Gun_Lowcal_Damage_Multiplier": 1.0,
+      "Gun_Highcal_Damage_Multiplier": 1.0,
+      "Melee_Damage_Multiplier": 1.0
+    },
+    "Players": {
+      "Health_Regen_Min_Food": 85,
+      "Health_Regen_Min_Water": 85,
+      "Health_Regen_Ticks": 60,
+      "Food_Use_Ticks": 350,
+      "Food_Damage_Ticks": 15,
+      "Water_Use_Ticks": 320,
+      "Water_Damage_Ticks": 20,
+      "Virus_Infect": 50,
+      "Virus_Use_Ticks": 125,
+      "Virus_Damage_Ticks": 25,
+      "Leg_Regen_Ticks": 750,
+      "Bleed_Damage_Ticks": 7,
+      "Bleed_Regen_Ticks": 15,
+      "Armor_Multiplier": 1.0,
+      "Experience_Multiplier": 1.0,
+      "Detect_Radius_Multiplier": 1.25,
+      "Ray_Aggressor_Distance": 8.0,
+      "Lose_Skills_PvP": 0.5,
+      "Lose_Skills_PvE": 0.5,
+      "Lose_Items_PvP": 0.99,
+      "Lose_Items_PvE": 1.0,
+      "Lose_Clothes_PvP": true,
+      "Lose_Clothes_PvE": true,
+      "Lose_Weapons_PvP": true,
+      "Lose_Weapons_PvE": true,
+      "Can_Hurt_Legs": true,
+      "Can_Break_Legs": true,
+      "Can_Fix_Legs": true,
+      "Can_Start_Bleeding": true,
+      "Can_Stop_Bleeding": true,
+      "Spawn_With_Max_Skills": false,
+      "Spawn_With_Stamina_Skills": false,
+      "Allow_Instakill_Headshots": true,
+      "Allow_Per_Character_Saves": true
+    },
+    "Objects": {
+      "Binary_State_Reset_Multiplier": 1.0,
+      "Fuel_Reset_Multiplier": 1.0,
+      "Water_Reset_Multiplier": 1.0,
+      "Resource_Reset_Multiplier": 1.0,
+      "Resource_Drops_Multiplier": 1.0,
+      "Rubble_Reset_Multiplier": 1.0,
+      "Allow_Holiday_Drops": true,
+      "Items_Obstruct_Tree_Respawns": true
+    },
+    "Events": {
+      "Rain_Frequency_Min": 3.0,
+      "Rain_Frequency_Max": 7.0,
+      "Rain_Duration_Min": 0.1,
+      "Rain_Duration_Max": 0.5,
+      "Snow_Frequency_Min": 1.3,
+      "Snow_Frequency_Max": 4.6,
+      "Snow_Duration_Min": 0.2,
+      "Snow_Duration_Max": 0.5,
+      "Airdrop_Frequency_Min": 0.5,
+      "Airdrop_Frequency_Max": 5.0,
+      "Airdrop_Speed": 100.0,
+      "Airdrop_Force": 8.0,
+      "Arena_Min_Players": 2,
+      "Arena_Compactor_Damage": 10,
+      "Arena_Clear_Timer": 5,
+      "Arena_Finale_Timer": 10,
+      "Arena_Restart_Timer": 15,
+      "Arena_Compactor_Delay_Timer": 1,
+      "Arena_Compactor_Pause_Timer": 5,
+      "Use_Airdrops": true,
+      "Arena_Use_Compactor_Pause": true,
+      "Arena_Compactor_Speed_Tiny": 0.5,
+      "Arena_Compactor_Speed_Small": 1.5,
+      "Arena_Compactor_Speed_Medium": 3.0,
+      "Arena_Compactor_Speed_Large": 4.5,
+      "Arena_Compactor_Speed_Insane": 6.0,
+      "Arena_Compactor_Shrink_Factor": 0.5
+    },
+    "Gameplay": {
+      "Repair_Level_Max": 2,
+      "Hitmarkers": true,
+      "Crosshair": false,
+      "Ballistics": true,
+      "Chart": true,
+      "Satellite": false,
+      "Compass": false,
+      "Group_Map": true,
+      "Group_HUD": true,
+      "Group_Player_List": true,
+      "Allow_Static_Groups": true,
+      "Allow_Dynamic_Groups": true,
+      "Allow_Shoulder_Camera": true,
+      "Can_Suicide": true,
+      "Friendly_Fire": true,
+      "Bypass_Buildable_Mobility": false,
+      "Timer_Exit": 10,
+      "Timer_Respawn": 10,
+      "Timer_Home": 30,
+      "Timer_Leave_Group": 10,
+      "Max_Group_Members": 0
+    }
+  },
+  "Hard": { 这个难度对应服务器难度中的Hard，如果在这个难度下改Config，则服务器在这个难度时自动使用该难度的Config
+    "Items": {
+      "Spawn_Chance": 0.3,
+      "Despawn_Dropped_Time": 1800.0,
+      "Despawn_Natural_Time": 1800.0,
+      "Respawn_Time": 1800.0,
+      "Quality_Full_Chance": 0.15,
+      "Quality_Multiplier": 1.0,
+      "Gun_Bullets_Full_Chance": 0.1,
+      "Gun_Bullets_Multiplier": 0.7,
+      "Magazine_Bullets_Full_Chance": 0.1,
+      "Magazine_Bullets_Multiplier": 0.5,
+      "Crate_Bullets_Full_Chance": 0.4,
+      "Crate_Bullets_Multiplier": 1.0,
+      "Has_Durability": true
+    },
+    "Vehicles": {
+      "Has_Battery_Chance": 0.25,
+      "Min_Battery_Charge": 0.1,
+      "Max_Battery_Charge": 0.5,
+      "Has_Tire_Chance": 0.5,
+      "Respawn_Time": 3600.0,
+      "Unlocked_After_Seconds_In_Safezone": 3600.0,
+      "Armor_Multiplier": 1.0,
+      "Child_Explosion_Armor_Multiplier": 1.0,
+      "Gun_Lowcal_Damage_Multiplier": 1.0,
+      "Gun_Highcal_Damage_Multiplier": 1.2,
+      "Melee_Damage_Multiplier": 1.0,
+      "Max_Instances_Tiny": 4,
+      "Max_Instances_Small": 8,
+      "Max_Instances_Medium": 16,
+      "Max_Instances_Large": 32,
+      "Max_Instances_Insane": 64
+    },
+    "Zombies": {
+      "Spawn_Chance": 0.5,
+      "Loot_Chance": 0.7,
+      "Crawler_Chance": 0.1,
+      "Sprinter_Chance": 0.1,
+      "Flanker_Chance": 0.05,
+      "Burner_Chance": 0.05,
+      "Acid_Chance": 0.05,
+      "Boss_Electric_Chance": 0.0001,
+      "Boss_Wind_Chance": 0.0001,
+      "Boss_Fire_Chance": 0.0001,
+      "Spirit_Chance": 0.0,
+      "DL_Red_Volatile_Chance": 0.0,
+      "DL_Blue_Volatile_Chance": 0.0,
+      "Boss_Elver_Stomper_Chance": 0.0,
+      "Respawn_Day_Time": 360.0,
+      "Respawn_Night_Time": 30.0,
+      "Respawn_Beacon_Time": 0.0,
+      "Quest_Boss_Respawn_Interval": 600.0,
+      "Damage_Multiplier": 1.5,
+      "Armor_Multiplier": 0.1,
+      "Backstab_Multiplier": 1.5,
+      "NonHeadshot_Armor_Multiplier": 2.0,
+      "Beacon_Experience_Multiplier": 1.0,
+      "Full_Moon_Experience_Multiplier": 2.0,
+      "Min_Drops": 1,
+      "Max_Drops": 1,
+      "Min_Mega_Drops": 5,
+      "Max_Mega_Drops": 5,
+      "Min_Boss_Drops": 8,
+      "Max_Boss_Drops": 10,
+      "Slow_Movement": true,
+      "Can_Stun": true,
+      "Only_Critical_Stuns": true,
+      "Weapons_Use_Player_Damage": true,
+      "Can_Target_Barricades": true,
+      "Can_Target_Structures": true,
+      "Can_Target_Vehicles": true,
+      "Beacon_Max_Rewards": 0,
+      "Beacon_Max_Participants": 0,
+      "Beacon_Rewards_Multiplier": 1.0
+    },
+    "Animals": {
+      "Respawn_Time": 900.0,
+      "Damage_Multiplier": 1.0,
+      "Armor_Multiplier": 1.25,
+      "Max_Instances_Tiny": 4,
+      "Max_Instances_Small": 8,
+      "Max_Instances_Medium": 16,
+      "Max_Instances_Large": 32,
+      "Max_Instances_Insane": 64,
+      "Weapons_Use_Player_Damage": true
+    },
+    "Barricades": {
+      "Decay_Time": 604800,
+      "Armor_Lowtier_Multiplier": 1.0,
+      "Armor_Hightier_Multiplier": 0.5,
+      "Gun_Lowcal_Damage_Multiplier": 1.0,
+      "Gun_Highcal_Damage_Multiplier": 1.0,
+      "Melee_Damage_Multiplier": 1.0,
+      "Allow_Item_Placement_On_Vehicle": true,
+      "Allow_Trap_Placement_On_Vehicle": true,
+      "Max_Item_Distance_From_Hull": 64.0,
+      "Max_Trap_Distance_From_Hull": 16.0
+    },
+    "Structures": {
+      "Decay_Time": 604800,
+      "Armor_Lowtier_Multiplier": 1.0,
+      "Armor_Hightier_Multiplier": 0.5,
+      "Gun_Lowcal_Damage_Multiplier": 1.0,
+      "Gun_Highcal_Damage_Multiplier": 1.0,
+      "Melee_Damage_Multiplier": 1.0
+    },
+    "Players": {
+      "Health_Regen_Min_Food": 85,
+      "Health_Regen_Min_Water": 85,
+      "Health_Regen_Ticks": 60,
+      "Food_Use_Ticks": 350,
+      "Food_Damage_Ticks": 15,
+      "Water_Use_Ticks": 320,
+      "Water_Damage_Ticks": 20,
+      "Virus_Infect": 50,
+      "Virus_Use_Ticks": 125,
+      "Virus_Damage_Ticks": 25,
+      "Leg_Regen_Ticks": 750,
+      "Bleed_Damage_Ticks": 7,
+      "Bleed_Regen_Ticks": 15,
+      "Armor_Multiplier": 1.0,
+      "Experience_Multiplier": 1.0,
+      "Detect_Radius_Multiplier": 1.25,
+      "Ray_Aggressor_Distance": 8.0,
+      "Lose_Skills_PvP": 0.5,
+      "Lose_Skills_PvE": 0.5,
+      "Lose_Items_PvP": 0.99,
+      "Lose_Items_PvE": 1.0,
+      "Lose_Clothes_PvP": true,
+      "Lose_Clothes_PvE": true,
+      "Lose_Weapons_PvP": true,
+      "Lose_Weapons_PvE": true,
+      "Can_Hurt_Legs": true,
+      "Can_Break_Legs": true,
+      "Can_Fix_Legs": true,
+      "Can_Start_Bleeding": true,
+      "Can_Stop_Bleeding": true,
+      "Spawn_With_Max_Skills": false,
+      "Spawn_With_Stamina_Skills": false,
+      "Allow_Instakill_Headshots": true,
+      "Allow_Per_Character_Saves": true
+    },
+    "Objects": {
+      "Binary_State_Reset_Multiplier": 1.0,
+      "Fuel_Reset_Multiplier": 1.0,
+      "Water_Reset_Multiplier": 1.0,
+      "Resource_Reset_Multiplier": 1.0,
+      "Resource_Drops_Multiplier": 1.0,
+      "Rubble_Reset_Multiplier": 1.0,
+      "Allow_Holiday_Drops": true,
+      "Items_Obstruct_Tree_Respawns": true
+    },
+    "Events": {
+      "Rain_Frequency_Min": 3.0,
+      "Rain_Frequency_Max": 7.0,
+      "Rain_Duration_Min": 0.1,
+      "Rain_Duration_Max": 0.5,
+      "Snow_Frequency_Min": 1.3,
+      "Snow_Frequency_Max": 4.6,
+      "Snow_Duration_Min": 0.2,
+      "Snow_Duration_Max": 0.5,
+      "Airdrop_Frequency_Min": 0.5,
+      "Airdrop_Frequency_Max": 5.0,
+      "Airdrop_Speed": 100.0,
+      "Airdrop_Force": 8.0,
+      "Arena_Min_Players": 2,
+      "Arena_Compactor_Damage": 10,
+      "Arena_Clear_Timer": 5,
+      "Arena_Finale_Timer": 10,
+      "Arena_Restart_Timer": 15,
+      "Arena_Compactor_Delay_Timer": 1,
+      "Arena_Compactor_Pause_Timer": 5,
+      "Use_Airdrops": true,
+      "Arena_Use_Compactor_Pause": true,
+      "Arena_Compactor_Speed_Tiny": 0.5,
+      "Arena_Compactor_Speed_Small": 1.5,
+      "Arena_Compactor_Speed_Medium": 3.0,
+      "Arena_Compactor_Speed_Large": 4.5,
+      "Arena_Compactor_Speed_Insane": 6.0,
+      "Arena_Compactor_Shrink_Factor": 0.5
+    },
+    "Gameplay": {
+      "Repair_Level_Max": 2,
+      "Hitmarkers": true,
+      "Crosshair": false,
+      "Ballistics": true,
+      "Chart": true,
+      "Satellite": false,
+      "Compass": false,
+      "Group_Map": true,
+      "Group_HUD": true,
+      "Group_Player_List": true,
+      "Allow_Static_Groups": true,
+      "Allow_Dynamic_Groups": true,
+      "Allow_Shoulder_Camera": true,
+      "Can_Suicide": true,
+      "Friendly_Fire": true,
+      "Bypass_Buildable_Mobility": false,
+      "Timer_Exit": 10,
+      "Timer_Respawn": 10,
+      "Timer_Home": 30,
+      "Timer_Leave_Group": 10,
+      "Max_Group_Members": 0
+    }
+  }
+}
